@@ -1,29 +1,24 @@
 const API_URL = "https://silmma.com/speechAI/api/";
 const helpText = document.querySelector(".speak-text");
-const textContent = document.querySelector(".text");
 const infoBar = document.querySelector(".speech");
 const infoContainer = document.querySelector(".speech-container");
 const btnContainer = document.querySelector(".button-container");
-
 let authToken = {};
 let speechConfig;
 let speechRecognizer;
 let isHold = false;
 let holdTimer;
-let processTimer;
-let noSpeechTimer;
-let speakText = "";
 
 async function getToken() {
   try {
     const response = await fetch(`${API_URL}botRoute.php?type=${btoa("get-token")}`);
     const data = await response.json();
-
+    
     if (data.msg === 'error') {
       console.log('Failed or expired authentication!');
       return; // Handle the error here
     }
-
+    
     authToken = data.result;
     speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(data.result.token, data.result.region);
     initializeSpeechRecognition();
@@ -35,46 +30,45 @@ async function getToken() {
 
 async function sendVoice(voice) {
   try {
-    const response = await $.ajax({
-      url: 'helpers/apiRoute.php?type=fill-form',
-      type: 'POST',
-      data: { "voice": voice, "stepform": stepHtml },
-      dataType: 'json'
-    });    
-
-    if (response.msg === 'success') {
-      console.log(response.result);
-      if (response.result.error) {
-        $('.stpsform.transup .error').html('<i class="fas fa-exclamation-triangle"></i> ' + response.result.error).show();
-      } else {
-        $('.stpsform.transup .error').hide();
-        $.each(response.result, function(key, value) {
-          const inputType = $('input[name="'+key+'"]').attr('type');
-          if(inputType == 'text'){
-            $('input[name="'+key+'"]').val(value);
-          }else if(inputType == 'date'){
-            $('input[name="'+key+'"]').val(value);
-          }else if(inputType == 'radio'){
-            const firstChar = value.substring( 0, 1 );
-            firstChar.toUpperCase();
-            tail = value.substring( 1 );
-            $('input[name="'+key+'"][value="'+firstChar + tail+'"]').prop('checked', true);
-          }else if(inputType == 'checkbox'){
-            const firstChar = value.substring( 0, 1 );
-            firstChar.toUpperCase();
-            tail = value.substring( 1 );
-            $('input[name="'+key+'"][value="'+firstChar + tail+'"]').prop('checked', true);
-            if(firstChar + tail == "No"){
-              $('input[name="'+key+'"]').prop('checked', false);
-            }
+    $.ajax({
+      url:'helpers/apiRoute.php?type=fill-form',
+      type:'POST',
+      data:{"voice": voice, "stepform":stepHtml},
+      dataType:'json',
+      success:function(response){   
+        infoBar.classList.remove("below-animation");
+        infoContainer.style.display = "none";     
+        if(response.msg == 'success'){
+          if(response.result.error){
+            $('.stpsform.transup .error').html('<i class="fas fa-exclamation-triangle"></i> '+response.result.error).show();
+          } else{
+            $('.stpsform.transup .error').hide();
+            $.each(response.result, function(key, value) {
+              const inputType = $('input[name="'+key+'"]').attr('type');
+              if(inputType == 'text'){
+                $('input[name="'+key+'"]').val(value);
+              }else if(inputType == 'date'){
+                $('input[name="'+key+'"]').val(value);
+              }else if(inputType == 'radio'){
+                const firstChar = value.substring( 0, 1 );
+                firstChar.toUpperCase();
+                tail = value.substring( 1 );
+                $('input[name="'+key+'"][value="'+firstChar + tail+'"]').prop('checked', true);
+              }else if(inputType == 'checkbox'){
+                const firstChar = value.substring( 0, 1 );
+                firstChar.toUpperCase();
+                tail = value.substring( 1 );
+                $('input[name="'+key+'"][value="'+firstChar + tail+'"]').prop('checked', true);
+              }
+            });
           }
-        });
+        }else{
+          console.error('Error:', "Error in fetch response");
+        }
       }
-    } else {
-      console.error('Error in fetch response');
-    }
+    });
   } catch (error) {
-    throw new Error('Error sending voice data: ' + error.message);
+    console.error('Error:', error);
   }
 }
 
@@ -124,41 +118,40 @@ async function connectMicrophone() {
 }
 
 async function startSpeechRecognition() {
-  try {
+  try {    
     await speechRecognizer.startContinuousRecognitionAsync();
-    $('#micButton').prop('checked', true);
-    helpText.style.display = "block";
-    helpText.innerHTML = loaderContent();
-    clearTimeout(processTimer);
-    clearTimeout(noSpeechTimer);
+    $('#micButton').prop('checked', true); 
+    helpText.style.display = "block";     
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-window.onload = async () => {
-  await connectMicrophone();
+window.onload = async () => {  
+  await connectMicrophone();  
 };
 
 function initializeSpeechRecognition() {
   const audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
+
   speechConfig.speechRecognitionLanguage = "en-US";
-  speechConfig.enableDictation();
+  speechConfig.enableDictation(); 
   speechConfig.setProfanity(SpeechSDK.ProfanityOption.Removed);
-  speechConfig.setProperty(SpeechSDK.PropertyId.SpeechServiceResponse_StablePartialResultThreshold, "0");
+  speechConfig.setProperty("SpeechServiceResponse_StablePartialResultThreshold", "0");
   speechConfig.setProperty(SpeechSDK.PropertyId.Speech_SegmentationSilenceTimeoutMs, "5000");
 
-  speechRecognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+  speechRecognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);  
 
-  speechRecognizer.recognizing = (s, e) => {     
-      helpText.textContent = speakText+" "+e.result.text; 
-      // Automatically scroll to the bottom
-      helpText.scrollTop = helpText.scrollHeight;
+  speechRecognizer.recognizing = (s, e) => {        
+      console.log("Recognizing:"+e.result.text);    
   };
 
-  speechRecognizer.recognized = (s, e) => {
-    if (e.result.reason == SpeechSDK.ResultReason.RecognizedSpeech && e.result.text) {     
-       speakText += " "+ e.result.text; 
+  speechRecognizer.recognized = (s, e) => {  
+    if (e.result.reason == SpeechSDK.ResultReason.RecognizedSpeech) {   
+      if(e.result.text) {   
+       console.log("Recognized:"+e.result.text);       
+       // helpText.textContent += " "+e.result.text; 
+      }
     } else if (e.result.reason == SpeechSDK.ResultReason.NoMatch) {
        console.log("NOMATCH: Speech could not be recognized.");
     }
@@ -172,66 +165,57 @@ function initializeSpeechRecognition() {
       console.log("CANCELED: Did you set the speech resource key and region values?");
     }
     speechRecognizer.stopContinuousRecognitionAsync();
-  };  
+  };
 
   speechRecognizer.sessionStopped = (s, e) => {
-    processTimer = setTimeout(() => {
-      if (speakText) {
-        helpText.textContent = "";
-        helpText.style.display = "none";
-        infoContainer.classList.add("below-animation");
-        btnContainer.style.display = "none";      
-        sendVoice(speakText)
-          .then(() => {
-            speakText = '';
-            infoContainer.classList.remove("below-animation");
-            btnContainer.style.display = "block";
-          })
-          .catch((error) => {
-            console.error('Error in sendVoice:', error);
-          });
-      } else {
-        helpText.textContent = "No speech could be recognized.";
-        noSpeechTimer = setTimeout(() => {
-          helpText.textContent = "";
-          helpText.style.display = "none";
-        }, 1000);
-      }
-    }, 1000);
-  }
+    console.log("\nSession stopped event.");   
+    speechRecognizer.stopContinuousRecognitionAsync();
+  };
+
+  speechRecognizer.sessionStarted = (s, e) => {
+    console.log("\nSession start event.");
+  };
 }
 
 $('.button-container').on('mousedown touchstart', async function(event) {
   event.stopPropagation();
   event.preventDefault();
-  if (microphone.isInitialized()) {
+  if (microphone.isInitialized()) {    
      holdTimer = setTimeout(() => {
         isHold = true;
         startSpeechRecognition();
+        isRecognizing = true; // Update recognizing state
       }, 300); // Example: 500ms for a hold
-  } else {
-    const micPermissionGranted = await connectMicrophone();
+  } else {    
+    const micPermissionGranted = await connectMicrophone();  
     if (!micPermissionGranted) {
       alert('Microphone access is required to use the form fill with AI. Please grant microphone permission.');
-    }
-  }
+    }     
+  } 
 });
 
-$('.button-container').on('mouseup touchend mouseleave', async function(event) {
+$('.button-container').on('mouseup touchend mouseleave', async function(event) { 
     clearTimeout(holdTimer);
-    if (!isHold) {
-      $('#micButton').prop('checked', false); 
+    if (!isHold) { 
+      $('#micButton').prop('checked', false);   
       return false;
     } else {
       try {
-        await speechRecognizer.stopContinuousRecognitionAsync();         
+        await speechRecognizer.stopContinuousRecognitionAsync();      
+        if (helpText.textContent) {
+          infoContainer.style.display = "block";
+          infoBar.classList.add("below-animation");
+          sendVoice(helpText.textContent);
+        }
+        helpText.textContent = "";
+        helpText.style.display = "none";  
       } catch (error) {
         console.error("Error stopping speech recognition:", error);
       }
       setTimeout(function() {
         $('#micButton').prop('checked', false); // Reset button state after a short delay
-      }, 300);
-    }    
+      }, 500);    
+    }
     isHold = false;
 });
 
@@ -255,15 +239,6 @@ function handleVisibilityChange() {
             console.error("Error while closing the microphone:", error);
         }
     }
-}
-
-function loaderContent(){
-  return `<div class="loader-speak">
-        <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>`;
 }
 
 getToken();

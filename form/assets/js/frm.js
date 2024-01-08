@@ -491,7 +491,7 @@ function executestep(stpnum){
     setTimeout(function() { 
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, 500);
-     
+    stepInfo(stpnum); 
 }
 
 function autoFillFields(stpnum){
@@ -499,6 +499,10 @@ function autoFillFields(stpnum){
         $('#step_'+stpnum+'_input1').val(formData['step_1_input1']);
         $('#step_'+stpnum+'_input2').val(formData['step_2_input1']);
     }    
+}
+
+function stepInfo(stpnum){
+    stepHtml =  $('.frm_stp_'+stpnum).html();
 }
 
 function barprogress(wid){
@@ -579,7 +583,8 @@ function submitForm(){
 function prevStp(stpprev){
     $(".stpsform").removeClass('transup');
     barprogress(stpprev);
-    $('.frm_stp_'+stpprev).addClass('transup');   
+    $('.frm_stp_'+stpprev).addClass('transup'); 
+    stepInfo(stpprev);   
 }
 
 let sheight = screen.height;
@@ -587,3 +592,5 @@ if(sheight>800){
     $('.hetsrl').addClass('scradjmob');
     $('.hetmobsrl').addClass('scradjmob');
 }
+
+stepInfo(1);

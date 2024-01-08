@@ -93,8 +93,8 @@ body{
 }
 
 .home-btn{
-   text-align: center; 
-    margin-bottom: 20px; 
+   text-align: center;
+    margin-bottom: 20px;
 }
 
 .home-btn a {
@@ -597,14 +597,14 @@ body{
     }
     .disflxCol .inputGroup{
        width: 100%;
-    } 
+    }
 }
 
 @media(min-width: 767px) {
   .hetsrl {
       height: 400px !important;
       padding-right: 35px;
-  }    
+  }
 }
 @media(min-width: 320px) and (max-width: 767px){
     .disflxCol{
@@ -612,13 +612,13 @@ body{
     }
     .disflxCol .inputGroup{
        width: 100%;
-    }   
+    }
     .home-btn a{
         padding: 13px 34px;
         font-size: 14px;
     }
     .home-btn .arrreverse {
-        width: 12px;    
+        width: 12px;
     }
     .w-50 {
         width: 50%;
@@ -770,7 +770,7 @@ body{
     border-radius: 8px !important;
     background-color: #ff7043 !important;
     color: #fff !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1 !important;
     font-family: 'Inter', sans-serif !important;
     box-shadow: 0 0 26px 5px rgb(255 112 67 / 30%) !important;
@@ -803,7 +803,7 @@ body{
     border-radius: 8px !important;
     background-color: #ff7043 !important;
     color: #fff !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1 !important;
     font-family: 'Inter', sans-serif !important;
     box-shadow: 0 0 26px 5px rgb(255 112 67 / 30%) !important;
@@ -1261,7 +1261,7 @@ body{
 .disflx{
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
 }
 .radiofullwid .inputGroup{
     width: 100%;
@@ -1405,7 +1405,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media(min-width: 340px) and (max-width: 767px){
 .stpsform {
-    width: 90%;
+    width: 93%;
     overflow: scroll;
     margin-bottom: 6rem;
 }
@@ -1612,7 +1612,7 @@ h1, h2, h3, h4, h5, h6 {
       padding: 13px 34px !important;
   }
   .btnsfrmsokprev{
-      padding: 13px 34px !important;
+      padding: 12px 34px !important;
   }
   .btnsfrmsok3 {
       padding: 20px 34px !important;
@@ -1680,7 +1680,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-    display: inline-block;   
+    display: inline-block;
     align-items: center;
     background: black;
     border-radius: 50%;
@@ -1705,14 +1705,15 @@ h1, h2, h3, h4, h5, h6 {
   perspective: 500px;
   -moz-perspective: 500px;
   -webkit-perspective: 500px;
+  display: none;
 }
 
 .mic-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   border-radius: 100%;
   transition: transform 0.4s;
   border: 2px solid #fff;
@@ -1739,24 +1740,24 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   transform: rotateY(0deg);
   pointer-events: none;
-  left: 23px;
-  top: 20px;
+  left: 20px;
+  top: 15px;
 }
 
 .mic-button-loader {
   position: absolute;
-  height: 102px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   background-color: transparent;
   transform: rotateY(180deg);
-  top: -31px;
-  left: -50px;
+  top: -25px;
+  left: -45px;
 }
 
 .mic-checkbox:checked + .mic-button > .mic > .mic-button-loader {
   border-top: 3px solid #AA1111;
   border-radius: 100%;
-  animation: borderLoader 1.3s 0.2s ease-in-out infinite; 
+  animation: borderLoader 1.3s 0.2s ease-in-out infinite;
 }
 
 .mic {
@@ -1784,7 +1785,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-left-radius: 110px;
   border-bottom-right-radius: 110px;
   border-top: 0;
-  
+
 }
 
 .mic:before {
@@ -1813,16 +1814,205 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
-/*
-  Just to fix the cover.
-  Not really needed.
-
-.mic-checkbox + .mic-button > .mic, .mic:after, .mic:before, .mic-base {
-  display: none;
+.speech-container{
+    transform: translateY(-150%);
+    transition: transform 0.5s ease-in-out;
 }
 
-.mic-checkbox:checked + .mic-button > .mic, .mic:after, .mic:before, .mic-base {
-  display: block;
+.speech {
+    letter-spacing: 1px;
+    margin: 20px auto 0 auto;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070706;
+    padding: 10px 0px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
 }
-*/
+
+  .below-animation {
+    transform: translateY(0%);
+  }
+
+  .typed-text {
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+
+  .speak-text {
+    display: none;
+    padding: 10px 20px;
+    border: 1px dotted #000;
+    overflow-y: scroll;
+}
+
+
+.speak-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+}
+
+.speak-text {
+    width: 53%;
+}
+
+
+.loader-speak{
+	margin:0 auto;
+}
+
+.loader-speak span{
+	width:16px;
+	height:16px;
+	border-radius:50%;
+	display:inline-block;
+	position:absolute;
+	left:50%;
+	margin-left:-10px;
+	-webkit-animation:3s infinite linear;
+	-moz-animation:3s infinite linear;
+	-o-animation:3s infinite linear;
+
+}
+
+
+.loader-speak span:nth-child(2){
+	background:#E84C3D;
+	-webkit-animation:kiri 1.2s infinite linear;
+	-moz-animation:kiri 1.2s infinite linear;
+	-o-animation:kiri 1.2s infinite linear;
+
+}
+.loader-speak span:nth-child(3){
+	background:#F1C40F;
+	z-index:100;
+}
+.loader-speak span:nth-child(4){
+	background:#2FCC71;
+	-webkit-animation:kanan 1.2s infinite linear;
+	-moz-animation:kanan 1.2s infinite linear;
+	-o-animation:kanan 1.2s infinite linear;
+}
+
+
+@-webkit-keyframes kanan {
+    0% {-webkit-transform:translateX(20px);
+    }
+
+	50%{-webkit-transform:translateX(-20px);
+	}
+
+	100%{-webkit-transform:translateX(20px);
+	z-index:200;
+	}
+}
+@-moz-keyframes kanan {
+    0% {-moz-transform:translateX(20px);
+    }
+
+	50%{-moz-transform:translateX(-20px);
+	}
+
+	100%{-moz-transform:translateX(20px);
+	z-index:200;
+	}
+}
+@-o-keyframes kanan {
+    0% {-o-transform:translateX(20px);
+    }
+
+	50%{-o-transform:translateX(-20px);
+	}
+
+	100%{-o-transform:translateX(20px);
+	z-index:200;
+	}
+}
+
+
+
+
+@-webkit-keyframes kiri {
+     0% {-webkit-transform:translateX(-20px);
+	z-index:200;
+    }
+	50%{-webkit-transform:translateX(20px);
+	}
+	100%{-webkit-transform:translateX(-20px);
+	}
+}
+
+@-moz-keyframes kiri {
+     0% {-moz-transform:translateX(-20px);
+	z-index:200;
+    }
+	50%{-moz-transform:translateX(20px);
+	}
+	100%{-moz-transform:translateX(-20px);
+	}
+}
+@-o-keyframes kiri {
+     0% {-o-transform:translateX(-20px);
+	z-index:200;
+    }
+	50%{-o-transform:translateX(20px);
+	}
+	100%{-o-transform:translateX(-20px);
+	}
+}
+
+.speak-text{
+    height: 20px;
+}
+
+.dot {
+	animation-name: toss-up;
+	animation-iteration-count: infinite;
+	animation-duration: 1.2s;
+}
+
+.one {animation-delay: 200ms}
+.two {animation-delay: 400ms}
+.three {animation-delay: 600ms}
+
+
+@keyframes toss-up {
+	0%{transform: translateY(0)}
+	15%{transform: translateY(-5px)}
+	45%{transform: translateY(0)}
+	100%{transform: translateY(0)}
+}
+
+@media only screen and (min-width: 280px) and (max-width:540px) {
+    .speech {
+        width: 93%;
+    }
+    .button-message {
+        width: auto;
+        font-size: 14px;
+        left: 0;
+        top: 16px;
+    }
+    .mic-button {
+        height: 70px;
+        width: 70px;
+    }
+    .speak-text {
+        width: 82%;
+    }
+    .mic-button-loader {
+
+        height: 70px;
+        width: 70px;
+
+        top: -16px;
+        left: -35px;
+      }
+}
+
