@@ -1,0 +1,21 @@
+{
+  "name": "form-fill-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.0.2",
+    "openai": "^4.24.1",
+    "socket.io": "^4.7.2"
+  }
+}

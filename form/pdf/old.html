@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {font-family: sans-serif;
+        font-size: 10pt;
+      }
+      p {	margin: 0pt; }
+      table.items {
+        border: 0.1mm solid #000000;
+      }
+      td { vertical-align: top; }
+      .items td {
+        border-left: 0.1mm solid #000000;
+        border-right: 0.1mm solid #000000;
+      }
+      table thead td { background-color: #EEEEEE;
+        text-align: center;
+        border: 0.1mm solid #000000;
+        font-variant: small-caps;
+      }
+      .items td.blanktotal {
+        background-color: #EEEEEE;
+        border: 0.1mm solid #000000;
+        background-color: #FFFFFF;
+        border: 0mm none #000000;
+        border-top: 0.1mm solid #000000;
+        border-right: 0.1mm solid #000000;
+      }
+      .items td.totals {
+        text-align: right;
+        border: 0.1mm solid #000000;
+      }
+      .items td.cost {
+        text-align: "." center;
+      }
+      </style>
+  </head>
+<body>
+  <h1>SCC Patient Form</h1>
+  <!-- Patient information start here-->
+  <h3>Patient Information</h3>
+  <div class="left-container">
+    <div class="input"><h4>Patient Name:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Date of birth:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>Address:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>State:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>SS#:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Marital status:</h4>
+      <input type="radio" checked="checked"> Single &nbsp;&nbsp;&nbsp; 
+      <input type="radio"> Married &nbsp;&nbsp;&nbsp;
+      <input type="radio"> Divorced &nbsp;&nbsp;&nbsp;<br>
+      <input type="radio"> Widowed
+    </div> 
+    <div class="input"><h4>Cell:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Email address:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>Phone:</h4><span>teste</span><hr class="input"/></div> 
+  </div>
+
+  <div class="right-container">
+    <div class="input"><h4>Age:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Sex:</h4>
+      <input type="radio" checked="checked"> Male &nbsp;&nbsp;&nbsp; 
+      <input type="radio"> Female &nbsp;&nbsp;&nbsp;
+      <input type="radio"> Other
+    </div>
+    <div class="input"><h4>City:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Zip:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Driver's License#:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Home phone:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Work:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Emergency contact name:</h4><span>teste</span><hr class="input"/></div>  
+  </div>
+  <div style="clear: both; margin: 0pt; padding: 0pt;"></div>
+  <!-- Patient information end here-->
+
+  <h3 >Referral Information</h3>
+  <div class="left-container">
+    <div class="input"><h4>Date of injury:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Did a doctor refer you?:</h4>
+      <input type="radio" checked="checked"> Yes &nbsp;&nbsp;&nbsp;&nbsp; 
+      <input type="radio"> No   
+    </div> 
+    <div class="input"><h4>Primary care physician:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>City:</h4><span>teste</span><hr class="input"/></div> 
+  </div>
+
+  <div class="right-container">
+    <div class="input"><h4>Reson for visit:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>Referring Doctor name:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Phone:</h4><span>teste</span><hr class="input"/></div>    
+  </div>
+  <div style="clear: both; margin: 0pt; padding: 0pt;"></div>
+
+  <h3>Mechanism of injury description</h3>
+  <div class="left-container">
+    <div class="input"><h4>Brief overview:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Private pay:</h4>
+      <input type="radio" checked="checked"> Yes &nbsp;&nbsp;&nbsp;&nbsp; 
+      <input type="radio"> No   
+    </div> 
+    <div class="input"><h4>Date of birth:</h4><span>teste</span><hr class="input"/></div>      
+  </div>
+
+  <div class="right-container">
+    <div class="input"><h4>Injured body part:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>Parent/Guardian:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>SS#:</h4><span>teste</span><hr class="input"/></div>    
+  </div>
+  <div style="clear: both; margin: 0pt; padding: 0pt;"></div>
+
+  <h3>Insured Information(Group Insurance)</h3>
+  <div class="left-container">
+    <div class="input"><h4>Insurance company:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>City:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Zip:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Policy#:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Co-pay:</h4><span>teste</span><hr class="input"/></div>    
+  </div>
+
+  <div class="right-container">
+    <div class="input"><h4>Address:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>State:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Phone:</h4><span>teste</span><hr class="input"/></div>   
+    <div class="input"><h4>Member Id:</h4><span>teste</span><hr class="input"/></div>  
+  </div>
+  <div style="clear: both; margin: 0pt; padding: 0pt;"></div>
+
+  <h3>Primary Card Holder's Information</h3>
+  <div class="left-container">
+    <div class="input"><h4>Insurance company:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>City:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Zip:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Policy#:</h4><span>teste</span><hr class="input"/></div>
+    <div class="input"><h4>Co-pay:</h4><span>teste</span><hr class="input"/></div>    
+  </div>
+
+  <div class="right-container">
+    <div class="input"><h4>Address:</h4><span>teste</span><hr class="input"/></div> 
+    <div class="input"><h4>State:</h4><span>teste</span><hr class="input"/></div>  
+    <div class="input"><h4>Phone:</h4><span>teste</span><hr class="input"/></div>   
+    <div class="input"><h4>Member Id:</h4><span>teste</span><hr class="input"/></div>  
+  </div>
+  <div style="clear: both; margin: 0pt; padding: 0pt;"></div>
+  <table class="items" width="100%" style="font-size: 9pt; border-collapse: collapse; " cellpadding="8">
+    <thead>
+      <tr>
+        <td width="5%">Ref. No.</td>
+        <td width="5%">Quantity</td>
+        <td width="5%">Description</td>
+        <td width="5%">Unit Price</td>
+        <td width="5%">Amount</td>
+        <td width="5%">Ref. No.</td>
+        <td width="5%">Quantity</td>
+        <td width="5%">Description</td>
+        <td width="5%">Unit Price</td>
+        <td width="5%">Amount</td>
+        <td width="5%">Ref. No.</td>
+        <td width="5%">Quantity</td>
+        <td width="5%">Description</td>
+        <td width="5%">Unit Price</td>
+        <td width="5%">Amount</td>
+        <td width="5%">Ref. No.</td>
+        <td width="5%">Quantity</td>
+        <td width="5%">Description</td>
+        <td width="5%">Unit Price</td>
+        <td width="5%">Amount</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>MF1234567</td>
+      <td>10</td>
+      <td>Large pack Hoover bags</td>
+      <td>&pound;2.56</td>
+      <td>&pound;25.60</td>
+    </tr>  
+    </tbody>
+    </table>
+</body>
+</html>

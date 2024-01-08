@@ -1,0 +1,68 @@
+body { font-family:'Oxygen', sans-serif; font-size: 10pt;}
+
+
+p{
+	color: #ff7043;
+	font-size: 14px;
+}
+
+ol li{
+	color: #ff7043;
+	font-size: 14px;
+}
+
+table.form {
+	border: 0.1mm solid #000000;
+	table-layout:fixed;
+}
+
+.form td {
+	border: 0.1mm solid #000000;
+	vertical-align: top;
+	width:20px;
+	overflow:hidden;
+	word-wrap:break-word;	
+}
+table thead td { 
+	background-color: #EEEEEE;
+	text-align: center;
+	border: 0.1mm solid #000000;
+	font-variant: small-caps;	
+}
+table tbody td.label {
+	background-color: #EEEEEE;	
+	border: 0.1mm solid #000000;
+	font-variant: small-caps;
+}
+
+.sign td {	
+	vertical-align: bottom;
+}
+
+.m-0{margin:0;}
+.mb-0{margin-bottom:0;}
+/*.sign{
+width:30%;
+}*/
+/*.sign img{
+	width:70px;
+}*/
+.rounded {
+  margin-top:20pt;
+  border:0.1mm solid #220044; 
+  border-radius: 2mm;
+  background-clip: border-box;
+  padding:10pt;
+}
+/*hr.input{
+	width:100%;
+	margin:0;
+}*/
+
+.input-line{
+	min-width:80pt;
+	width: 120px;
+	border-bottom: 2px solid #000;
+	color: #000;
+ 	font-size: 12pt;
+}

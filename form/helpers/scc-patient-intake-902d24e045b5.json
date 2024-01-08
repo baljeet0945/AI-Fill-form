@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "scc-patient-intake",
+  "private_key_id": "902d24e045b5f96c6dfba83d1940a92fda323441",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDszJWYVMHvuvru\neIhVeC5knG7a80EC4Y/ad6T4xNlEqFvKxlOpdgiDUQfy0f1yb8zMQMHlInl/POuY\nxMOS45kfClooL5uWXzoVOxR1DutyacGch2Emlc+0BgzTARumO3n7ih/697phWpmE\nRDYlUCN6ClSbiEIr46Ae7KTWokrYNsC00Ylwz7X6/ZQFcOvTqQaDe3r5Q2oBdTyb\nuTKNHcGh/DLX9Vhl0sVc6ONN2WLZqAtVbNmEnMJmAO8qDjd4hDHIDBfrhZWTRNn/\nkkSkwciWvbfq0CTEcXwbMDvExYJRi6YZt3RZMFaGRD6ufbN7Guz0fR4Qx/REpv0K\nx4L+rQAvAgMBAAECggEAYQaOwSTxde3yRWYDzql4sObcEUCcwbZ0f/qIERpvP8+Q\nFOzgeM4RPOUl0ZuzMoGWs5ZRHDbc+4KVsjnlPLmfEvXl7RNct+d64BoeDry3QmEM\n4Lsj1nCJ82SLOqX4k0tJdwSoh+ebaap6vpRIb09/ydCTzEqvelZBVIp4HC3RZvd2\nh5BYqEexbfhJa/GUYoD6LxmXOa39aD54tyNihvmrPPU+IaBaS0bhBEyoPaPLLW8c\nPbZLd14oZRRpvRsbJUG6ZV4Sf3YyIGA6QbiorAgRTYsWIuZ3AfQellZMhXLpFLhI\nTqtOxLxAuTaowfOAg2zrvAMthP65jQhibdbDqRi+KQKBgQD2wp3tvWWT0pJOcLw4\nZYl5NnbpR0b+mZx7fpEjU4etjB+QCm27vGIwgyOFoywRH8BeSwbfZMO+iqVLno9Q\nY7dU87xKf+Ox7vcQgxp+JFUbfSTNkCi5Z1El/pkTE8+G3IT05J1UoY0qML4+wueC\nO7E1GPw1LpbeqfHVdwfDFWYcYwKBgQD1qnutsaNWJYrrPYXl/CN+AjFEn/JhTEve\n0Glp/Sb5bwEDtgGaF2VsscC/H6ku+Y6A9b5x9lfK022SqAVls0F/UzJWBOwv08H2\n4nnUsyd16jjjgl+1y+S87zZvQA/5iPAbfG872ZXoae5GsLcu2JJ7PquwwkWJr2VM\nblt0JCa4xQKBgHwwEDlxI2kVBesSU7fyahCl94yKAdHqz1VbqoHj7RnLtqrQhM+C\nDMyrgzojl+76Ut9h1RCi7ty7fFslbq0fskm/7Rh1asvHH3Kg+LlZYbfW8KnADq7Y\nr392teVjCAOwgf2Z/RB1yczdATIm90qU7idx7qR5URa44uvy3uYwo9ZPAoGBANm1\npvtsJIMwrCcDE8mYJGAEU2MsmCFv+wDQE8tRBJwiqnR+dHb5avHjqRv3U/iEQqy4\nm3jlRjJCIqXIb1gMfuv2b/JZVHKiKA/B7xP3XO4bjyTYIje7JM/m8oeu7zlGCPti\n0DTrA/W/AuH0s7I5Tb8Y8BCqafO104Djf/qyGvq9AoGAU6dh152ITu5QCrzF+PYc\ndUyqzIomeSEEBAN8yftcWi0ZsxXCfyzn3nC5586V/8r6lfKNjS2yq7QcFftJOz5W\n0l1fZelT2bZKqeAZXQfKZuw9gM7DjyoI5iN7l8ShOXXjI1Ye2cD+z+FCbp22RXv1\n4qP9cbCELHkfzvxKA8JD1so=\n-----END PRIVATE KEY-----\n",
+  "client_email": "patient-intake-form@scc-patient-intake.iam.gserviceaccount.com",
+  "client_id": "106838670166961826934",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/patient-intake-form%40scc-patient-intake.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
