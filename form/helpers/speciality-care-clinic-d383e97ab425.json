@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "speciality-care-clinic",
-  "private_key_id": "d383e97ab4258652263a5f8097eab9a12c008eab",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCD0pX1EHsMDb+Q\n8h1OzjBYZc9yCr6iqqJeDlEdWACSUp+GJsFtv5K6E6CTl1rjj9QHYHBfyAZ9RaA7\nNYW8BtvNnrU7TOhF2UtjSN2Fsfr+a8zJ1Nsm/20vdiDgG+r+XkdbSpHWTuPgWFtG\nX11lGmh3RnZoZx8bZpOGwiFOphk1+TuDcSMZxAQRvOUwbh6hgwMUIKGteo17kNFL\n/ASe7nbVXqPuSwn2a7nh6qEhjClcIwiGWb9so3uoVHWpj9BKmO+AUFfxbWrk972X\njDSW72/G1u8+LHbFU9GjBouO4+yMbInyz8l7xBV4jsRXOt6fW9i9zliQrw94hMop\n61Vx8ycnAgMBAAECggEAK1mlVuIElQIwbUoxuSi1XVydy7Mc3gGfQ68RncTC61ug\nek1kbuMBLZAmzmKH0S4LXCGq0tTEzY2IE/CV+i+HOSdoEghImi/LSus7biwJjoGE\n5xrItxponaMLTKfhr6TxcmQjcYagCbcEzS+vVwBIOnFBnzPKVwh0m2xb57FXuRe0\nV0QR6ADwk7XH+GQjbI0kGuUSaAZrQ/OghLIXq6gjeBAKFs6ztiwX0doOey0+AWNr\nE2/7v+KEcU2Uh0t1HYGyUb+HJ1or2ReX7FsSAsGqXE/CA4Cw1p46F5m5aZAXZc8a\nW64BttIxkQz1ljF6kmDrk+dZ9qQvzBel5X6mgCaVgQKBgQC4qXmhiqCq4jQaup5K\nJHez13fwnSDPjvH3PR6KoGTyi2y2lIPNUdAfN/ULBqk/bfRY3ClOp4sD/6UCTe7B\n8pBFLXZpfZQR3uL/3C/S5hg6rfsRl0vi1d3VYoV43rEDPa1BcrhayAFokwyJqb9D\ndCITyMQRDS/n69L+DszBE+ZiSwKBgQC2v3Me+ANRVpwJlEQxCRsTdxYA65DRYGAU\n4BTTJ8fdOxRNDjkko3hHQWiQV1+rOsGja4ffwwaNFuQ3Plx9avVIN0WVznzxyWnf\nUvydZJYNx8bKOlNRVJRinuoo4qPKcvhL+7dMDi3D2rF5KtVNM6Q5BYo1rDCWKBGP\nUsAr2mDlFQKBgA7iwoZOKYN89pxM/OOXKvsZXHbOA84XhNPcXnDoWxreOGZDdJiB\nhthtZ1h7MfuF/pOHM+E+SkuJOSEFbUC/L/gToR8B24TRRdVAR66lk8BvM/UIEDr5\n6IcCCSZkNTrApw3GlKvkwZBPgkw6nctvOiwEHCIPwRPeA8UtJj5OP10fAoGBAKOJ\nwGO+Xnmzn/+Sh1O6aliJAU/hfr9gF5uWzAwKVXlNHWW3jLuU7lYV2pURG7QH6LFt\n0TIVPQ+VpLUrQWmbBdWSYNsm5fkZ3XzUruvKz92VIfhnKZhmsENxIutjpl/NcxXM\nNMQDDEFwu9FK24cy54t/wac2aGR3hv9TdlXIH13hAoGAS+KHpkymcikxx+08hAqU\nNzJdgNLq/EmBR8bY0Czb3G53GFP6+VL1bIQD8d77p0v3XFa8HhJKuuTX3NEWui48\n89yW5+yO2NRDoEgnzmgFuIMHzQsTCV6PPpTmbjMpT5L5A1e/qKwal2J2FLdQQwRP\njWHddATjlhJS27X6JKdxMNw=\n-----END PRIVATE KEY-----\n",
-  "client_email": "phpsheet@speciality-care-clinic.iam.gserviceaccount.com",
-  "client_id": "116121830623093723608",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/phpsheet%40speciality-care-clinic.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
