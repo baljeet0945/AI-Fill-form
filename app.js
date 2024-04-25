@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
       io.to(socket.id).emit('voice-end', prompt); 
       return false;
       const openai = new OpenAI({
-          apiKey: "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",
+          apiKey: "",
       });
       const history = [{"role": "system", "content": `You are an intelligent, helpful assistant helping users complete a form through voice input. The form has multiple steps, and the user's spoken responses need to be translated into structured JSON data. Fill out the form using the provided structure object/n 
 
