@@ -21,7 +21,7 @@ class CHATGPT {
 			$ch = curl_init();
 			$headers = array(
 			    'Content-Type: application/json',
-			    'Authorization: Bearer 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'
+			    'Authorization: Bearer {{API_KEY}}'
 			);
 
 			$data = array(
